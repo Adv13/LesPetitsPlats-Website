@@ -1,4 +1,3 @@
-//maj
 const recipes = [
     {
         "id": 1,
