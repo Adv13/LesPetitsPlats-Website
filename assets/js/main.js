@@ -1,0 +1,1 @@
+// EXAMPLE : import CLASSNAME from './API/recipes.js';
