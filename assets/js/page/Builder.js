@@ -1,4 +1,4 @@
-'use strict';/////////////////////////////////
+'use strict';
 
 import Appliances from '../filters/Appliances.js';
 import DataLogic from '../utilities/DataLogic.js';

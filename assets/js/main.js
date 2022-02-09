@@ -1,4 +1,5 @@
 'use strict';
+
 import Builder from './page/Builder.js';
 import Messages from './page/Messages.js';
 import Search from './search/Search.js';
