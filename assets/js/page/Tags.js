@@ -8,6 +8,10 @@ import Appliances from '../filters/Appliances.js';
 import Ustensils from '../filters/Ustensils.js';
 import DataLogic from '../utilities/DataLogic.js';
 
+/*
+Manage the tags when a user selectes one of the items under the main searchbar (show it and/or hide it) and reset the section when the tag is closed.
+*/
+
 export default class Badges {
     static hiddenIngredientsFilter = document.querySelector('#hiddenIngredientsFilter');
     static hiddenAppareilFilter = document.querySelector('#hiddenAppareilFilter');

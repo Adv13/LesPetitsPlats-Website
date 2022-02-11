@@ -1,6 +1,6 @@
 'use strict';
 /*
-Manage all messages linked to the research (shown/hidden).
+Manage all messages linked to the research (content and shown/hidden).
 */
 export default class Messages {
     static resultMessage = document.getElementById('resultMessage');

@@ -1,4 +1,7 @@
 'use strict';
+/*
+Manage the options of all the buttons (display/hide each of them, manage the addEventListener with a click on them).
+*/
 
 export default class Buttons {
     static launchButtons(btn, open, close, hiddenPart) {

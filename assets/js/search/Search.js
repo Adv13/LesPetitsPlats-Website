@@ -2,7 +2,18 @@
 
 import DataLogic from '../utilities/DataLogic.js';
 import Utils from '../utilities/Utils.js';
+/*
+SEARCH BAR : Manage the main searchbar buy updating the text in the input (normalizetext), create a table 'recipesMatched' and return it with the datalogic structure.
 
+SEARCH INPUT FILTER : Manage the search input filter bar buy updating the text in the input (normalizetext),create a table 'resultInput' and return it.
+
+SEARCH FILTER TAG INGREDIENTS : Manage the search filter tag 'ing' bar buy updating the text in the input (normalizetext),create a table 'resultIng' and return it.
+
+SEARCH FILTER TAG APPLIANCES : Manage the search filter tag 'app' bar buy updating the text in the input (normalizetext),create a table 'resultApp' and return it.
+
+SEARCH FILTER TAG USTENSILES : Manage the search filter tag bar 'ust' buy updating the text in the input (normalizetext),create a table 'resultUst' and return it.
+
+*/
 export default class Search {
     static searchMainInput(value) {
         let recipesMatched = [];
