@@ -1,5 +1,7 @@
 'use strict';
-
+/*
+Create the webpage structure in order to show all recipes and information linked to them (name, time, ingredients, quantity, unit).
+*/
 import Utils from '../utilities/Utils.js';
 
 export default class DomService {

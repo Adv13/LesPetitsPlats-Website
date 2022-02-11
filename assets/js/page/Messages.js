@@ -1,5 +1,7 @@
 'use strict';
-
+/*
+Manage all messages linked to the research (shown/hidden).
+*/
 export default class Messages {
     static resultMessage = document.getElementById('resultMessage');
     static resultSpan = document.querySelector('#resultMessage > span');
@@ -31,6 +33,7 @@ export default class Messages {
         return this.resultMessage.style.display = 'none';
     }
 
+    //close the message when there is a click on the cross button
     static hideMessageOnClick() {
         document.querySelector("#resultMessage > i").addEventListener('click', () => {
             return this.hideMessage();
