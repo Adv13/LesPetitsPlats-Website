@@ -7,11 +7,10 @@ import Ingredients from '../filters/Ingredients.js';
 import Messages from './Messages.js';
 import Ustensils from '../filters/Ustensils.js';
 
-/* init allows the creation of the default webpage with all recipes buy using the table "recipesApiResult". ALso by using the class Domservice in order to create the webpage, 
-
+/* init allows the creation of the default webpage with all recipes buy using the table "recipesApiResult". 
 initSearch allows the creation of the webpage with the results of the search by using the table "recipesMatched".
 
-
+Also show the result by using the class Domservice in order to create the webpage, DataLogic in order to formats all recipes, Ingredients/Appliances/Ustensils classes in order to manage their appereance and functionalities (display of items, searchinput bar, and filtertag in each of them) and Messages class in order to hide it.
 
 */
 

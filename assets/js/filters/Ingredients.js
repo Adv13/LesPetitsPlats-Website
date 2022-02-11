@@ -8,6 +8,10 @@ import Tags from '../page/Tags.js';
 import Utils from '../utilities/Utils.js';
 import DataLogic from '../utilities/DataLogic.js';
 
+/*
+Manage every aspects linked to the ingredients button (addEventListener 'click' on it, display of ingredients, searchinput bar, ingredients updated according to recipes shown)
+*/
+
 export default class Ingredients {
     static ingredientsExample = document.getElementById('ingredientsExample');
 

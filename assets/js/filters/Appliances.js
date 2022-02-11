@@ -8,6 +8,9 @@ import Search from '../search/Search.js';
 import Tags from '../page/Tags.js';
 import Utils from '../utilities/Utils.js';
 
+/*
+Manage every aspects linked to the appliances button (addEventListener 'click' on it, display of ingredients, searchinput bar, ingredients updated according to recipes shown)
+*/
 export default class Appliances {
     static appliancesExample = document.getElementById('appareilExample');
 

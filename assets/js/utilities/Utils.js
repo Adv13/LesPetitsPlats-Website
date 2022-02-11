@@ -1,5 +1,9 @@
 'use strict';
 
+/*
+Manage the apperance of the text, normalize the text from the input, clear recipe section, clear filters and sortby title (for filters buttons)
+*/
+
 export default class Utils {
     // search starts from 3 characters
     static isValid(value) {

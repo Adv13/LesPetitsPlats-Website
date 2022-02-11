@@ -1,5 +1,9 @@
 'use strict';
 
+/*
+Create a table ingredients/appliances/ustensils in which we include all the data concerned.
+*/
+
 export default class DataLogic {
     // get all the ingredients to make them appear by default, before searching
     static getAllIngredients(ing) {
