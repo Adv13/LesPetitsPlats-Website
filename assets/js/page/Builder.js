@@ -7,6 +7,14 @@ import Ingredients from '../filters/Ingredients.js';
 import Messages from './Messages.js';
 import Ustensils from '../filters/Ustensils.js';
 
+/* init allows the creation of the default webpage with all recipes buy using the table "recipesApiResult". ALso by using the class Domservice in order to create the webpage, 
+
+initSearch allows the creation of the webpage with the results of the search by using the table "recipesMatched".
+
+
+
+*/
+
 export default class Builder {
     static init() {
         // Build Section with all Recipes before Search
