@@ -1,6 +1,6 @@
 
 // Import database with all the recipes
-import DataAllRecipes from "../API/data.json"
+//import DataAllRecipes from "../API/data.json"
 import DataLogic from '../utilities/DataLogic.js';
 import Utils from '../utilities/Utils.js';
 /*
