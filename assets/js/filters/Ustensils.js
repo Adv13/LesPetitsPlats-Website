@@ -22,7 +22,7 @@ export default class Ustensils {
             document.querySelector("#hiddenUstensilesFilter"));
         this.fillUstensils(Utils.sortByTitle(ustensils));
         this.searchInput(ustensils);
-        this.filterTags(recipes);
+        this.filterByTags(recipes);
         return this;
     }
 
@@ -54,8 +54,8 @@ export default class Ustensils {
         });
     }
 
-    static filterTags(recipes) {
-        let selected = [];
+    // gives the activated class to the selected tag and searches if it is present in the recipes
+    static filterByTags(recipes) {
         let ustensileTag = document.getElementById('ustensileTag');
 
         document.querySelector('#ustensilesExample').addEventListener('click', (event) => {
@@ -63,23 +63,27 @@ export default class Ustensils {
 
             if (-1 === classValue.indexOf('selected')) {
                 event.target.classList.add('selected');
-                selected.push(event.target.getAttribute('data-filter'));
                 Buttons.hideButtonsOnClick(document.querySelector("#ustensiles > button"),
                     document.querySelector("#openUstensilesFilter"),
                     document.querySelector("#hiddenUstensilesFilter"))
                 Tags
                     .buildTags(ustensileTag, Utils.upperText(event.target.getAttribute('data-filter')))
                     .removeTagsOnClick(document.querySelector("#ustensileTag > i"), event, ustensileTag, recipes);
-                Messages.buildResultMessageWithResult(Search.searchByUstTags(recipes, selected));
-                Utils.clearRecipesSection();
-                DomService.buildResult(Search.searchByUstTags(recipes, selected));
-                Utils.clearFilters(this.ustensilsExample);
-                this.fillUstensils(Utils.sortByTitle(DataLogic.getAllUstensils(Search.searchByUstTags(recipes, selected))));
+                Messages.hideMessage();
+                this.searchAndDisplayRecipesFiltered();
+                return;
             } else {
-                selected.splice(event.target.getAttribute('data-filter'));
                 Tags.resetSection(event, ustensileTag, recipes);
             };
         });
-        return selected;
+        return this;
+    }
+
+    static searchAndDisplayRecipesFiltered() {
+        let resultFilters = Search.searchByTags();
+
+        Messages.buildResultMessageWithResult(resultFilters.show);
+        Utils.showRecipesFiltered(resultFilters.show);
+        Utils.hideRecipesFiltered(resultFilters.hide);
     }
 }

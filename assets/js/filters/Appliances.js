@@ -22,7 +22,7 @@ export default class Appliances {
             document.querySelector("#hiddenAppareilFilter"));
         this.fillAppliances(Utils.sortByTitle(appliances));
         this.searchInput(appliances);
-        this.filterTags(recipes);
+        this.filterByTags(recipes);
         return this;
     }
 
@@ -54,8 +54,8 @@ export default class Appliances {
         });
     }
 
-    static filterTags(recipes) {
-        let selected = [];
+    // gives the activated class to the selected tag and searches if it is present in the recipes
+    static filterByTags(recipes) {
         let appareilTag = document.getElementById('appareilTag');
 
         document.querySelector('#appareilExample').addEventListener('click', (event) => {
@@ -63,23 +63,27 @@ export default class Appliances {
 
             if (-1 === classValue.indexOf('selected')) {
                 event.target.classList.add('selected');
-                selected.push(event.target.getAttribute('data-filter'));
                 Buttons.hideButtonsOnClick(document.querySelector("#appareil > button"),
                     document.querySelector("#openAppareilFilter"),
                     document.querySelector("#hiddenAppareilFilter"))
                 Tags
                     .buildTags(appareilTag, Utils.upperText(event.target.getAttribute('data-filter')))
                     .removeTagsOnClick(document.querySelector("#appareilTag > i"), event, appareilTag, recipes);
-                Messages.buildResultMessageWithResult(Search.searchByAppTags(recipes, selected));
-                Utils.clearRecipesSection();
-                DomService.buildResult(Search.searchByAppTags(recipes, selected));
-                Utils.clearFilters(this.appliancesExample);
-                this.fillAppliances(Utils.sortByTitle(DataLogic.getAllAppliances(Search.searchByAppTags(recipes, selected))));
+                Messages.hideMessage();
+                this.searchAndDisplayRecipesFiltered();
+                return;
             } else {
-                selected.splice(event.target.getAttribute('data-filter'));
                 Tags.resetSection(event, appareilTag, recipes);
             };
         });
-        return selected;
+        return this;
+    }
+
+    static searchAndDisplayRecipesFiltered() {
+        let resultFilters = Search.searchByTags();
+
+        Messages.buildResultMessageWithResult(resultFilters.show);
+        Utils.showRecipesFiltered(resultFilters.show);
+        Utils.hideRecipesFiltered(resultFilters.hide);
     }
 }

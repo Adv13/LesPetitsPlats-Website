@@ -23,7 +23,7 @@ export default class Ingredients {
             document.querySelector("#hiddenIngredientsFilter"));
         this.fillIngredients(Utils.sortByTitle(ingredients));
         this.searchInput(ingredients);
-        this.filterTags(recipes);
+        this.filterByTags(recipes);
     }
 
     // display the ingredients in the ingredients zone according to the recipes displayed in the 'recipes' section
@@ -54,33 +54,35 @@ export default class Ingredients {
         });
     }
 
-    static filterTags(recipes) {
-        let selected = [];
-        let ingredientTag = document.getElementById('ingredientTag');
+    // gives the activated class to the selected tag and searches if it is present in the recipes
+    static filterByTags(recipes) {
+        let ingredientTag = document.getElementsByClassName('ingredientTag');
 
         document.querySelector('#ingredientsExample').addEventListener('click', (event) => {
             let classValue = event.target.classList.value;
 
             if (-1 === classValue.indexOf('selected')) {
                 event.target.classList.add('selected');
-                selected.push(event.target.getAttribute('data-filter'));
                 Buttons.hideButtonsOnClick(document.querySelector("#ingredients > button"),
                     document.querySelector("#openIngredientsFilter"),
-                    document.querySelector("#hiddenIngredientsFilter"))
+                    document.querySelector("#hiddenIngredientsFilter"));
                 Tags
                     .buildTags(ingredientTag, Utils.upperText(event.target.getAttribute('data-filter')))
-                    .removeTagsOnClick(document.querySelector("#ingredientTag > i"), event, ingredientTag, recipes);
-                Messages.buildResultMessageWithResult(Search.searchByIngTags(recipes, selected));
-                Utils.clearRecipesSection();
-                let result = Search.searchByIngTags(recipes, selected);
-                DomService.buildResult(result);
-                Utils.clearFilters(this.ingredientsExample);
-                this.fillIngredients(Utils.sortByTitle(DataLogic.getAllIngredients(result)));
+                    .removeTagsOnClick(document.querySelector(".ingredientTag > i"), event, ingredientTag, recipes);
+                this.searchAndDisplayRecipesFiltered();
+                return;
             } else {
-                selected.splice(event.target.getAttribute('data-filter'));
                 Tags.resetSection(event, ingredientTag, recipes);
             };
         });
-        return selected;
+        return this;
+    }
+
+    static searchAndDisplayRecipesFiltered(){
+        let resultFilters = Search.searchByTags();
+
+        Messages.buildResultMessageWithResult(resultFilters.show);
+        Utils.showRecipesFiltered(resultFilters.show);
+        Utils.hideRecipesFiltered(resultFilters.hide);
     }
 }
