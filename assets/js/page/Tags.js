@@ -22,7 +22,10 @@ export default class Badges {
     }
 
     static displayTag(elt) {
-        return elt.style.display = 'flex';
+        for (var i = 0;i<elt.length;i+=1){//new
+            return elt[i].style.display = 'flex';
+        }
+        
     }
 
     // fill in the selected tag
@@ -33,8 +36,9 @@ export default class Badges {
     // remove the tag and replace the ingredient/appliance/ustensil buttons
     static hideTag(elt) {
         this.pushUpButtonsFilter();
-
+        for (var i = 0;i<elt.length;i+=1){//new
         return elt.style.display = 'none';
+        }
     }
 
     // push down the ingredient/appliance/ustensil buttons

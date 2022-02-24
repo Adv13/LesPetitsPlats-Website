@@ -56,7 +56,7 @@ export default class Ingredients {
 
     // gives the activated class to the selected tag and searches if it is present in the recipes
     static filterByTags(recipes) {
-        let ingredientTag = document.getElementsByClassName('ingredientTag');
+        let ingredientTag = document.getElementsByClassName('ingredientTag');//new
 
         document.querySelector('#ingredientsExample').addEventListener('click', (event) => {
             let classValue = event.target.classList.value;
@@ -68,7 +68,7 @@ export default class Ingredients {
                     document.querySelector("#hiddenIngredientsFilter"));
                 Tags
                     .buildTags(ingredientTag, Utils.upperText(event.target.getAttribute('data-filter')))
-                    .removeTagsOnClick(document.querySelector(".ingredientTag > i"), event, ingredientTag, recipes);
+                    .removeTagsOnClick(document.querySelector(".ingredientTag > i"), event, ingredientTag, recipes);//new
                 this.searchAndDisplayRecipesFiltered();
                 return;
             } else {

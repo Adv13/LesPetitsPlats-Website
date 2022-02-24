@@ -56,7 +56,7 @@ export default class Utils {
 
     // get the elements holding the 'activated' class
     static getFiltersWithClassActivated(){
-        let currentFilters = add(document.querySelectorAll('li.selected'));
+        let currentFilters = add(document.querySelectorAll('li.selected'));//new
         let filterSelected = [];
 
         currentFilters.forEach(function(currentFilter){
