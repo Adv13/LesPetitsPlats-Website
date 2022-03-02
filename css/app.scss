@@ -1,0 +1,13 @@
+
+// BOOTSTRAP
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "./utils/variables";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// SCSS
+@import "./base/base";
+@import "./pages/index";
+@import "./components/card";
+@import "./components/filter";
+
