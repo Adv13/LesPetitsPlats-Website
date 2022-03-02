@@ -25,8 +25,16 @@ Utiliser [node.js](https://nodejs.org/en/download/) pour travailler sur le proje
 
 ## Contribution
 Le projet possède une branche "main" ainsi que deux branches utilisées pour chaque algorithme :
-- Algo01
-- Algo02
+- [Algo01](https://github.com/Adv13/DENIE_Tiffany_7_16112021/tree/Algo01)
+- [Algo02](https://github.com/Adv13/DENIE_Tiffany_7_16112021/tree/Algo02)
+
+##  Schémas des algorithmes
+
+- A venir
+
+##  Comparatif via jsbench.ch
+
+- A venir
 
 ##  Auteur
 
