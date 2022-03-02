@@ -25,8 +25,8 @@ Utiliser [node.js](https://nodejs.org/en/download/) pour travailler sur le proje
 
 ## Contribution
 Le projet possède une branche "main" ainsi que deux branches utilisées pour chaque algorithme :
-Algo01
-Algo02
+- Algo01
+- Algo02
 
 ##  Auteur
 
