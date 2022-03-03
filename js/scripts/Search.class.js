@@ -105,7 +105,7 @@ export default class Search {
 
 
   //Update filters list items after search event
-  updateFiltersList (listReceipts) {
+  updateFiltersList (listReceipts);{
     let listAppliances = []
     let listIngredients = []
     let listUstensils = []
@@ -144,7 +144,7 @@ export default class Search {
   }
 
   //Close all filters Event
-  filtersClose () {
+  filtersClose ();{
     this._filterIngredients.closeFilter()
     this._filterAppliances.closeFilter()
     this._filterUstensils.closeFilter()
