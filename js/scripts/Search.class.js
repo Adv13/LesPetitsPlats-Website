@@ -54,51 +54,9 @@ export default class Search {
    * @param {Receipt[]} listReceipt
    */
   displayResult (listReceipts) {
-    this.updateFiltersList(listReceipts)
     this._receipts.createHTMLContent(listReceipts)
+    this.updateFiltersList(listReceipts)
     this._tagEventInit()
-  }
-
-  search () {
-    const inputKeywordsTab = formatString(this.$searchInput.value.replace(/\s+/g, '+')).split('+')
-    let result = []
-    // ======================================/
-    // Search_feature V1 Input Research
-    // ======================================/
-    if (this.$searchInput.value.length >= 3) {
-      result = result.concat(this._searchByTitle(inputKeywordsTab, this._receipts.receiptsList)) // keyword full string
-      result = result.concat(this._searchByDescription(inputKeywordsTab, this._receipts.receiptsList)) // keyword full string
-      result = result.concat(this._searchByAppliance(inputKeywordsTab, this._receipts.receiptsList)) // keyword string one word
-      result = result.concat(this._searchByIngredients(inputKeywordsTab, this._receipts.receiptsList)) // keyword string one word
-      result = result.concat(this._searchByUstensils(inputKeywordsTab, this._receipts.receiptsList)) // keyword string one word
-    } else {
-      result = this._receipts.receiptsList
-    }
-    // ======================================/
-    // Search_feature V1 Tag Research
-    // ======================================/
-    if (this._tag.listTags.length > 0) {
-      for (const tag of this._tag.listTags) {
-        const keyword = [formatString(tag.value)]
-        switch (tag.category) {
-          case 'ingredients':
-            result = this._searchByIngredients(keyword, result)
-            break
-
-          case 'appliances':
-            result = this._searchByAppliance(keyword, result)
-            break
-
-          case 'ustensils':
-            result = this._searchByUstensils(keyword, result)
-            break
-        }
-      }
-    }
-
-    result = [...new Set(result)]
-
-    this.displayResult(result)
   }
 
   /**
@@ -117,7 +75,6 @@ export default class Search {
       listIngredients = listIngredients.concat(receipt.ingredients)
       listUstensils = listUstensils.concat(receipt.ustensils)
 
-      // Remove tags selected on listItem
       // Remove tags selected on listItem
       for (const tag of this._tag.listTags) {
         switch (tag.category) {
@@ -152,44 +109,49 @@ export default class Search {
     this._filterUstensils.closeFilter()
   }
 
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByTitle (keywords, listReceipts) {
-    const result = []
-    const keywordsString = keywords.join(' ')
+  search () {
+    const inputKeywordsTab = formatString(this.$searchInput.value.replace(/\s+/g, '+')).split('+')
+    let result = []
     // ======================================/
-    // Search_feature V1
+    // Search_feature V2 Input Research
     // ======================================/
-    for (const receipt of listReceipts) {
-      if (formatString(receipt.name).includes(keywordsString)) {
-        result.push(receipt)
-      }
+    if (this.$searchInput.value.length >= 3) {
+      for (let i = 0; i < listReceipts.length; i++) {
+        const {name, ingredients, description} = listReceipts[i];
+        const includesInName = name.includes(inputKeywordsTab);
+        const includesInDescription = description.includes(inputKeywordsTab);
+        let includesInIngredients = false;
+        for (let y = 0; y < ingredients.length; y++) {
+          if (ingredients[y].ingredient.includes(inputKeywordsTab)){
+            includesInIngredients = true;
+          }
+        }
+        if (includesInName || includesInDescription || includesIngredients){
+          result.push(listReceipts[i]);
+        }
+       }
+    // ======================================/
+    // Search_feature V2 Tag Research
+    // ======================================/
+    if (this._tag.listTags.length > 0) {
+      this._tag.listTags.forEach(tag => {
+        switch (tag.category) {
+          case 'ingredients':
+            result = this._searchByIngredients(new Array(tag.value), result)
+            break
+          case 'appliances':
+            result = this._searchByAppliance(new Array(tag.value), result)
+            break
+          case 'ustensils':
+            result = this._searchByUstensils(new Array(tag.value), result)
+            break
+        }
+      })
     }
 
-    return result
-  }
+    result = [...new Set(result)]
 
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByDescription (keywords, listReceipts) {
-    const result = []
-    const keywordsString = keywords.join(' ')
-    // ======================================/
-    // Search_feature V1
-    // ======================================/
-    for (const receipt of listReceipts) {
-      if (formatString(receipt.description).includes(keywordsString)) {
-        result.push(receipt)
-      }
-    }
-
-    return result
+    this.displayResult(result)
   }
 
   /**
@@ -198,19 +160,13 @@ export default class Search {
    * @returns {Receipt[]}
    */
   _searchByIngredients (keywords, listReceipts) {
-    const result = []
+    let result = []
     // ======================================/
-    // Search_feature V1
+    // Search_feature V2
     // ======================================/
-    for (const keyword of keywords) {
-      for (const receipt of listReceipts) {
-        for (const ingredient of receipt.keywordsIngredients) {
-          if (ingredient.includes(keyword) && keyword.length >= 3) {
-            result.push(receipt)
-          }
-        }
-      }
-    }
+    keywords.forEach(keyword => {
+      result = listReceipts.filter(item => item.keywordsIngredients.includes(formatString(keyword)) && keyword.length >= 3)
+    })
 
     return result
   }
@@ -221,18 +177,14 @@ export default class Search {
    * @returns {Receipt[]}
    */
   _searchByAppliance (keywords, listReceipts) {
-    const result = []
-    const keywordsString = keywords.join(' ')
+    let result = [];
+    const keywordsString = keywords.join(' ');
     // ======================================/
-    // Search_feature V1
+    // Search_feature V2
     // ======================================/
-    for (const receipt of listReceipts) {
-      if (formatString(receipt.appliance).includes(keywordsString)) {
-        result.push(receipt)
-      }
-    }
+    result = listReceipts.filter(item => formatString(item.appliance).includes(formatString(keywordsString)) && keywordsString.length >= 3);
 
-    return result
+    return result;
   }
 
   /**
@@ -241,19 +193,13 @@ export default class Search {
    * @returns {Receipt[]}
    */
   _searchByUstensils (keywords, listReceipts) {
-    const result = []
+    let result = []
     // ======================================/
-    // Search_feature V1
+    // Search_feature V2
     // ======================================/
-    for (const keyword of keywords) {
-      for (const receipt of listReceipts) {
-        for (const ustensil of receipt.keywordsUstensils) {
-          if (ustensil.includes(keyword) && keyword.length >= 3) {
-            result.push(receipt)
-          }
-        }
-      }
-    }
+    keywords.forEach(keyword => {
+      result = listReceipts.filter(item => item.keywordsUstensils.includes(formatString(keyword)) && keyword.length >= 3)
+    })
 
     return result
   }
