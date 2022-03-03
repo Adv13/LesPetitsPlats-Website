@@ -103,24 +103,17 @@ export default class Search {
   search () {
     const inputKeywordsTab = formatString(this.$searchInput.value.replace(/\s+/g, '+')).split('+')
     let result = []
+
     // ===========================/
     // Algo02 Input Research
     // ===========================/
     if (this.$searchInput.value.length >= 3) {
-      for (let i = 0; i < listReceipts.length; i++) {
-        const {name, ingredients, description} = listReceipts[i];
-        const includesInName = name.includes(inputKeywordsTab);
-        const includesInDescription = description.includes(inputKeywordsTab);
-        let includesInIngredients = false;
-        for (let y = 0; y < ingredients.length; y++) {
-          if (ingredients[y].ingredient.includes(inputKeywordsTab)){
-            includesInIngredients = true;
-          }
-        }
-        if (includesInName || includesInDescription || includesIngredients){
-          result.push(listReceipts[i]);
-        }
-       }
+      result = listReceipts.filter((item) => { return (
+        item.formatString(item.name).includes(inputKeywordsTab) && inputKeywordsTab.length >= 3 ||
+        item.formatString(item.description).includes(inputKeywordsTab) && inputKeywordsTab.length >= 3 ||
+        item.forEach(listReceipts.filter(item => item.keywordsIngredients.includes(formatString(inputKeywordsTab)) && inputKeywordsTab.length >= 3))
+      );
+    });
     // ===========================/
     // Algo02 Tag Research
     // ===========================/
@@ -201,6 +194,30 @@ export default class Search {
     })
     }
 
+
+  // ======================================/
+  // Search from title V2
+  // ======================================/
+  _searchByTitle (keywords, listReceipts);{
+    let result = []
+    const keywordsString = keywords.join(' ')
+
+    result = listReceipts.filter(item => formatString(item.name).includes(keywordsString) && keywordsString.length >= 3)
+
+    return result
+  }
+
+  // ======================================/
+  // Search from description V2
+  // ======================================/
+  _searchByDescription (keywords, listReceipts);{
+    let result = []
+    const keywordsString = keywords.join(' ')
+
+    result = listReceipts.filter(item => formatString(item.description).includes(keywordsString) && keywordsString.length >= 3)
+
+    return result
+  }
   // ======================================/
   // Algo02 for ingredients
   // ======================================/
