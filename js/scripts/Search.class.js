@@ -64,11 +64,11 @@ export default class Search {
     if (this.$searchInput.value.length >= 3) {
       for (let i = 0; i < listReceipts.length; i++) {
         const {name, ingredients, description} = listReceipts[i];
-        const includesInName = name.includes(inputKeywordsTab);
-        const includesInDescription = description.includes(inputKeywordsTab);
+        const includesInName = name.includes.formatString((inputKeywordsTab));
+        const includesInDescription = description.includes.formatString((inputKeywordsTab));
         let includesInIngredients = false;
         for (let y = 0; y < ingredients.length; y++) {
-          if (ingredients[y].ingredient.includes(inputKeywordsTab)){
+          if (ingredients[y].ingredient.includes.formatString((inputKeywordsTab))){
             includesInIngredients = true;
           }
         }
