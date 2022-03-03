@@ -72,7 +72,7 @@ export default class Search {
             includesInIngredients = true;
           }
         }
-        if (includesInName || includesInDescription || includesIngredients){
+        if (includesInName || includesInDescription || includesInIngredients){
           result.push(listReceipts[i]);
         }
       }
