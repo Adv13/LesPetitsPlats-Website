@@ -5,9 +5,7 @@ import { ReceiptsList } from './Receipt.class'
 import { formatString } from './utils'
 
 export default class Search {
-  /**
-   * @param {ObjectJSON} data
-   */
+
   constructor (data) {
     this._data = data
 
@@ -49,10 +47,8 @@ export default class Search {
     this._tag.ariaControlInit(this._removeTagEvent)
   }
 
-  /**
-   * Display result after search Event
-   * @param {Receipt[]} listReceipt
-   */
+  
+  //Display result after search Event
   displayResult (listReceipts) {
     this.updateFiltersList(listReceipts)
     this._receipts.createHTMLContent(listReceipts)
@@ -62,21 +58,27 @@ export default class Search {
   search () {
     const inputKeywordsTab = formatString(this.$searchInput.value.replace(/\s+/g, '+')).split('+')
     let result = []
-    // ======================================/
-    // Search_feature V1 Input Research
-    // ======================================/
+    // ===============================/
+    // Algo01 Input Research
+    // ===============================/
     if (this.$searchInput.value.length >= 3) {
-      result = result.concat(this._searchByTitle(inputKeywordsTab, this._receipts.receiptsList)) // keyword full string
-      result = result.concat(this._searchByDescription(inputKeywordsTab, this._receipts.receiptsList)) // keyword full string
-      result = result.concat(this._searchByAppliance(inputKeywordsTab, this._receipts.receiptsList)) // keyword string one word
-      result = result.concat(this._searchByIngredients(inputKeywordsTab, this._receipts.receiptsList)) // keyword string one word
-      result = result.concat(this._searchByUstensils(inputKeywordsTab, this._receipts.receiptsList)) // keyword string one word
-    } else {
-      result = this._receipts.receiptsList
-    }
-    // ======================================/
-    // Search_feature V1 Tag Research
-    // ======================================/
+      for (let i = 0; i < listReceipts.length; i++) {
+        const {name, ingredients, description} = listReceipts[i];
+        const includesInName = name.includes(inputKeywordsTab);
+        const includesInDescription = description.includes(inputKeywordsTab);
+        let includesInIngredients = false;
+        for (let y = 0; y < ingredients.length; y++) {
+          if (ingredients[y].ingredient.includes(inputKeywordsTab)){
+            includesInIngredients = true;
+          }
+        }
+        if (includesInName || includesInDescription || includesIngredients){
+          result.push(listReceipts[i]);
+        }
+      }
+    // ===============================/
+    // Algo01 Tag Research
+    // ===============================/
     if (this._tag.listTags.length > 0) {
       for (const tag of this._tag.listTags) {
         const keyword = [formatString(tag.value)]
@@ -101,10 +103,8 @@ export default class Search {
     this.displayResult(result)
   }
 
-  /**
-   * Update filters list items after search event
-   * @param {Receipt[]} listReceipts
-   */
+
+  //Update filters list items after search event
   updateFiltersList (listReceipts) {
     let listAppliances = []
     let listIngredients = []
@@ -143,26 +143,20 @@ export default class Search {
     this._filterUstensils.updateFilterResultHtml(listUstensils)
   }
 
-  /**
-   * Close all filters Event
-   */
+  //Close all filters Event
   filtersClose () {
     this._filterIngredients.closeFilter()
     this._filterAppliances.closeFilter()
     this._filterUstensils.closeFilter()
   }
 
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByTitle (keywords, listReceipts) {
+  // ======================================/
+  // Search from title
+  // ======================================/
+  _searchByTitle (keywords, listReceipts);{
     const result = []
     const keywordsString = keywords.join(' ')
-    // ======================================/
-    // Search_feature V1
-    // ======================================/
+
     for (const receipt of listReceipts) {
       if (formatString(receipt.name).includes(keywordsString)) {
         result.push(receipt)
@@ -172,17 +166,13 @@ export default class Search {
     return result
   }
 
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByDescription (keywords, listReceipts) {
+  // ======================================/
+  // Search from description
+  // ======================================/
+  _searchByDescription (keywords, listReceipts);{
     const result = []
     const keywordsString = keywords.join(' ')
-    // ======================================/
-    // Search_feature V1
-    // ======================================/
+
     for (const receipt of listReceipts) {
       if (formatString(receipt.description).includes(keywordsString)) {
         result.push(receipt)
@@ -192,16 +182,12 @@ export default class Search {
     return result
   }
 
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByIngredients (keywords, listReceipts) {
+  // ======================================/
+  // Search from ingredients
+  // ======================================/
+  _searchByIngredients (keywords, listReceipts);{
     const result = []
-    // ======================================/
-    // Search_feature V1
-    // ======================================/
+
     for (const keyword of keywords) {
       for (const receipt of listReceipts) {
         for (const ingredient of receipt.keywordsIngredients) {
@@ -215,17 +201,13 @@ export default class Search {
     return result
   }
 
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByAppliance (keywords, listReceipts) {
+  // ======================================/
+  // Search from appliances
+  // ======================================/
+  _searchByAppliance (keywords, listReceipts);{
     const result = []
     const keywordsString = keywords.join(' ')
-    // ======================================/
-    // Search_feature V1
-    // ======================================/
+
     for (const receipt of listReceipts) {
       if (formatString(receipt.appliance).includes(keywordsString)) {
         result.push(receipt)
@@ -235,16 +217,12 @@ export default class Search {
     return result
   }
 
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByUstensils (keywords, listReceipts) {
+  // ======================================/
+  // Search from ustensils
+  // ======================================/
+  _searchByUstensils (keywords, listReceipts);{
     const result = []
-    // ======================================/
-    // Search_feature V1
-    // ======================================/
+
     for (const keyword of keywords) {
       for (const receipt of listReceipts) {
         for (const ustensil of receipt.keywordsUstensils) {
@@ -258,10 +236,7 @@ export default class Search {
     return result
   }
 
-  /**
-   * @param {EventListeners} event
-   */
-  _addTagEvent (event) {
+  _addTagEvent (event);{
     const $node = this._tag.addTag(event.target)
     $node.addEventListener('click', this._removeTagEvent)
 
@@ -269,19 +244,14 @@ export default class Search {
     this.search()
   }
 
-  /**
-   * @param {EventListeners} event
-   */
-  _removeTagEvent (event) {
+  _removeTagEvent (event);{
     this.filtersClose()
     this._tag.removeTag(event.target)
     this.search()
   }
 
-  /**
-   * Ferme tous les filtre et ouvre celui qui est clické
-   */
-  _filterEventInit () {
+  //close all filters and open the one clicked
+  _filterEventInit ();{
     // Expand Filters action
     this._filterIngredients.filterHTMLComponent.addEventListener('click', event => {
       this._filterAppliances.closeFilter()
@@ -306,7 +276,7 @@ export default class Search {
   /**
    * Init Event Tags
    */
-  _tagEventInit () {
+  _tagEventInit ();{
     this._filterIngredients.filterHTMLComponent.querySelectorAll('.filter__item').forEach(item => {
       item.addEventListener('click', this._addTagEvent)
     })
