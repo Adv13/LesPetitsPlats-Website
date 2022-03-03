@@ -32,9 +32,6 @@ export class ReceiptsList {
     return this._listUstensils
   }
 
-  /**
-   * @param {Receipt[]} arrayReceipts
-   */
   createHTMLContent (arrayReceipts = this._receiptsList) {
     if (this.$wrapperReceipts.querySelector('#result')) this.$wrapperReceipts.querySelector('#result').remove()
 
@@ -51,9 +48,6 @@ export class ReceiptsList {
     }
   }
 
-  /**
-   * @returns {HTMLElement}
-   */
   createHTMLContainer () {
     const $node = document.createElement('ul')
     $node.classList.add('row', 'justify-content-start', 'm-0', 'p-0', 'list-unstyled')
@@ -79,9 +73,7 @@ export class ReceiptsList {
 }
 
 export class Receipt {
-  /**
-   * @param {ObjectJSON} itemData
-   */
+
   constructor (itemData) {
     this._id = itemData.id
     this._name = itemData.name
@@ -112,9 +104,7 @@ export class Receipt {
     return this._description
   }
 
-  /**
-   * @return {Array} with strings ingredients
-   */
+  //Array with strings ingredients
   get ingredients () {
     const lisIngredients = []
     this._ingredients.forEach(item => {
@@ -124,24 +114,16 @@ export class Receipt {
     return lisIngredients
   }
 
-  /**
-   * @return {String} format string for keywords research
-   */
+  //format string for keywords research
   get keywordsIngredients () {
     return formatString(this.ingredients.join('+')).split('+')
   }
 
-  /**
-   * @return {String} format string for keywords research
-   */
+  //format string for keywords research
   get keywordsUstensils () {
     return formatString(this._ustensils.join('+')).split('+')
   }
 
-  /**
-   * @param {Number} iteration
-   * @returns {HTMLElement}
-   */
   createHTMLComponent (iteration) {
     const $wrapper = document.createElement('li')
     $wrapper.classList.add('col-xl-4', 'col-md-6', 'col-sm-12', 'box', 'px-4', 'p-0', 'mb-5')
@@ -172,9 +154,6 @@ export class Receipt {
     return $wrapper
   }
 
-  /**
-   * @returns {HTMLElement}
-   */
   _createHTMLIngredients () {
     const $wrapper = document.createElement('ul')
     $wrapper.classList.add('col-6')
