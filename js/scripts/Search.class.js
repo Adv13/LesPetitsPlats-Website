@@ -5,9 +5,7 @@ import { ReceiptsList } from './Receipt.class'
 import { formatString } from './utils'
 
 export default class Search {
-  /**
-   * @param {ObjectJSON} data
-   */
+
   constructor (data) {
     this._data = data
 
@@ -49,27 +47,19 @@ export default class Search {
     this._tag.ariaControlInit(this._removeTagEvent)
   }
 
-  /**
-   * Display result after search Event
-   * @param {Receipt[]} listReceipt
-   */
+  //Display result after search Event
   displayResult (listReceipts) {
     this._receipts.createHTMLContent(listReceipts)
     this.updateFiltersList(listReceipts)
     this._tagEventInit()
   }
 
-  /**
-   * Update filters list items after search event
-   * @param {Receipt[]} listReceipts
-   */
+  //Update filters list items after search event
   updateFiltersList (listReceipts) {
     let listAppliances = []
     let listIngredients = []
     let listUstensils = []
-    // ======================================/
-    // Search_feature V1
-    // ======================================/
+
     for (const receipt of listReceipts) {
       listAppliances.push(receipt.appliance)
       listIngredients = listIngredients.concat(receipt.ingredients)
@@ -100,21 +90,22 @@ export default class Search {
     this._filterUstensils.updateFilterResultHtml(listUstensils)
   }
 
-  /**
-   * Close all filters Event
-   */
+
+  //Close all filters Event
   filtersClose () {
     this._filterIngredients.closeFilter()
     this._filterAppliances.closeFilter()
     this._filterUstensils.closeFilter()
   }
 
+/* Search function for each aspect of the research*/
+
   search () {
     const inputKeywordsTab = formatString(this.$searchInput.value.replace(/\s+/g, '+')).split('+')
     let result = []
-    // ======================================/
-    // Search_feature V2 Input Research
-    // ======================================/
+    // ===========================/
+    // Algo02 Input Research
+    // ===========================/
     if (this.$searchInput.value.length >= 3) {
       for (let i = 0; i < listReceipts.length; i++) {
         const {name, ingredients, description} = listReceipts[i];
@@ -130,9 +121,9 @@ export default class Search {
           result.push(listReceipts[i]);
         }
        }
-    // ======================================/
-    // Search_feature V2 Tag Research
-    // ======================================/
+    // ===========================/
+    // Algo02 Tag Research
+    // ===========================/
     if (this._tag.listTags.length > 0) {
       this._tag.listTags.forEach(tag => {
         switch (tag.category) {
@@ -154,60 +145,8 @@ export default class Search {
     this.displayResult(result)
   }
 
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByIngredients (keywords, listReceipts) {
-    let result = []
-    // ======================================/
-    // Search_feature V2
-    // ======================================/
-    keywords.forEach(keyword => {
-      result = listReceipts.filter(item => item.keywordsIngredients.includes(formatString(keyword)) && keyword.length >= 3)
-    })
-
-    return result
-  }
-
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByAppliance (keywords, listReceipts) {
-    let result = [];
-    const keywordsString = keywords.join(' ');
-    // ======================================/
-    // Search_feature V2
-    // ======================================/
-    result = listReceipts.filter(item => formatString(item.appliance).includes(formatString(keywordsString)) && keywordsString.length >= 3);
-
-    return result;
-  }
-
-  /**
-   * @param {Array} keywords
-   * @param {Receipt[]} listReceipts
-   * @returns {Receipt[]}
-   */
-  _searchByUstensils (keywords, listReceipts) {
-    let result = []
-    // ======================================/
-    // Search_feature V2
-    // ======================================/
-    keywords.forEach(keyword => {
-      result = listReceipts.filter(item => item.keywordsUstensils.includes(formatString(keyword)) && keyword.length >= 3)
-    })
-
-    return result
-  }
-
-  /**
-   * @param {EventListeners} event
-   */
-  _addTagEvent (event) {
+  // remove tag when there is a click on the target
+  _addTagEvent (event);{
     const $node = this._tag.addTag(event.target)
     $node.addEventListener('click', this._removeTagEvent)
 
@@ -215,19 +154,17 @@ export default class Search {
     this.search()
   }
 
-  /**
-   * @param {EventListeners} event
-   */
-  _removeTagEvent (event) {
+  //remove tag when there is a click on it
+  _removeTagEvent (event);{
     this.filtersClose()
     this._tag.removeTag(event.target)
     this.search()
   }
 
   /**
-   * Ferme tous les filtre et ouvre celui qui est clické
+   * close all filters and open the one that is clicked
    */
-  _filterEventInit () {
+  _filterEventInit ();{
     // Expand Filters action
     this._filterIngredients.filterHTMLComponent.addEventListener('click', event => {
       this._filterAppliances.closeFilter()
@@ -245,14 +182,14 @@ export default class Search {
       this._filterUstensils.expandFilter(event)
     })
 
-    // Close all filter if click out filters
+    // Close all filters if click out filters
     document.querySelector('body').addEventListener('click', this.filtersClose)
   }
 
   /**
    * Init Event Tags
    */
-  _tagEventInit () {
+  _tagEventInit ();{
     this._filterIngredients.filterHTMLComponent.querySelectorAll('.filter__item').forEach(item => {
       item.addEventListener('click', this._addTagEvent)
     })
@@ -262,5 +199,44 @@ export default class Search {
     this._filterUstensils.filterHTMLComponent.querySelectorAll('.filter__item').forEach(item => {
       item.addEventListener('click', this._addTagEvent)
     })
+    }
+
+  // ======================================/
+  // Algo02 for ingredients
+  // ======================================/
+  _searchByIngredients (keywords, listReceipts);{
+    let result = []
+
+    keywords.forEach(keyword => {
+      result = listReceipts.filter(item => item.keywordsIngredients.includes(formatString(keyword)) && keyword.length >= 3)
+    })
+
+    return result
   }
-}
+
+  // ======================================/
+  // Algo02 for appliances
+  // ======================================/
+  _searchByAppliance (keywords, listReceipts);{
+    let result = [];
+    const keywordsString = keywords.join(' ');
+
+    result = listReceipts.filter(item => formatString(item.appliance).includes(formatString(keywordsString)) && keywordsString.length >= 3);
+
+    return result;
+  }
+
+  // ======================================/
+  // Algo02 for ustensils
+  // ======================================/
+  _searchByUstensils (keywords, listReceipts);{
+    let result = []
+
+    keywords.forEach(keyword => {
+      result = listReceipts.filter(item => item.keywordsUstensils.includes(formatString(keyword)) && keyword.length >= 3)
+    })
+
+    return result
+  }
+
+  }
