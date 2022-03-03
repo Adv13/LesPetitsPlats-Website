@@ -3,10 +3,7 @@ export default class API {
     this._url = url
   }
 
-  /**
-   * Simulate Request for receipt datas
-   * @returns {Promise}
-   */
+  //Simulate Request for receipt datas
   async getAllReceipts () {
     return fetch(this._url)
       .then(response => response.json())
