@@ -1,6 +1,3 @@
-/**
- * @property {Array} listTags
- */
 export default class Tag {
   constructor () {
     this._listTags = []
@@ -19,10 +16,6 @@ export default class Tag {
     return this._listTags
   }
 
-  /**
-   * @param {HTMLElement} target
-   * @return {HTMLElement}
-   */
   addTag (target) {
     // add Tag Element on TagList
     this._listTags.push({ value: target.innerHTML, category: target.dataset.category })
@@ -43,9 +36,6 @@ export default class Tag {
     return $wrapper
   }
 
-  /**
-   * @param {HTMLElement} target
-   */
   removeTag (target) {
     // Delete Tag Element on TagList
     this._listTags = this._listTags.filter(item => !(item.value === target.innerHTML && item.category === target.dataset.category))
@@ -57,10 +47,7 @@ export default class Tag {
     target.remove()
   }
 
-  /**
-   * Keyboard control for filters
-   * @param {Function} callback
-   */
+  //Keyboard control for filters
   ariaControlInit (callback) {
     this.$wrapperTags.addEventListener('keydown', event => {
       if (event.key === 'Enter' && document.activeElement.classList.contains('tags__item')) {
@@ -70,10 +57,7 @@ export default class Tag {
     })
   }
 
-  /**
-   * PRIVATE : Container list Tags
-   * @returns {HTMLElement}
-   */
+  //PRIVATE : Container list Tags
   _createTagsHtmlContainer () {
     const $wrapper = document.createElement('ul')
     $wrapper.classList.add('m-0', 'p-0', 'd-flex', 'flex-row', 'flex-wrap')
@@ -82,11 +66,7 @@ export default class Tag {
     return $wrapper
   }
 
-  /**
-   * PRIVATE : Tag HTML Component
-   * @param {HTMLElement} target
-   * @returns {HTMLElement}
-   */
+  //PRIVATE : Tag HTML Component
   _createTagHtmlContent (target) {
     const tagColor = target.dataset.color
     const $wrapper = document.createElement('li')

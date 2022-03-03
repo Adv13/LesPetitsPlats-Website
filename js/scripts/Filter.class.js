@@ -1,8 +1,5 @@
 import { formatString } from './utils'
 
-/**
- * @property {HTMLElement} filterHTMLComponent
- */
 export default class Filter {
   /**
    * @param {String} label
@@ -55,10 +52,6 @@ export default class Filter {
     this.$wrapperFiltersList.appendChild(this.$wrapperFilter)
   }
 
-  /**
-   * @param {Array} items
-   * @returns {HTMLElement}
-   */
   updateFilterResultHtml (items) {
     this._items = items
 
@@ -88,9 +81,6 @@ export default class Filter {
     this.$listItems = Array.from(this.$wrapperFilter.querySelectorAll('.filter__item'))
   }
 
-  /**
-   * @param {EventListenerObject} event
-   */
   expandFilter (event) {
     event.stopPropagation()
     if (event.target.classList.contains('filter')) {
@@ -123,10 +113,6 @@ export default class Filter {
     }
   }
 
-  /**
-   * Keyboard control for filters
-   * @param {Function} callback
-   */
   ariaControlInit (callback) {
     let index = 0
 
@@ -183,9 +169,6 @@ export default class Filter {
     })
   }
 
-  /**
-   * @param {EventListenerObject} event
-   */
   _searchFilter (event) {
     const value = event.target.value
     const result = []
@@ -208,9 +191,6 @@ export default class Filter {
     }
   }
 
-  /**
-   * @returns {HTMLElement}
-   */
   _createNoResultHTML () {
     const $node = document.createElement('p')
     $node.classList.add('filter__result', 'no-result', 'm-0', 'p-3', 'pt-0', 'text-white', 'fs-6')
