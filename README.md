@@ -30,7 +30,7 @@ Le projet possède une branche "main" ainsi que deux branches utilisées pour ch
 
 ##  Schémas des algorithmes
 
-- A venir
+- [Schémas](https://github.com/Adv13/DENIE_Tiffany_7_16112021/blob/main/LesPetitsPlats_Algos.drawio.pdf)
 
 ##  Comparatif via jsbench.ch
 
