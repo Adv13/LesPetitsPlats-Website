@@ -1,4 +1,4 @@
-import { formatString } from './utils'
+import { formatString } from './utils.js'
 
 export default class Filter {
   /**

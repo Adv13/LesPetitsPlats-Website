@@ -1,6 +1,7 @@
 {
-  "name": "p7---2",
+  "name": "Les petits plats&",
   "version": "1.0.0",
+  "type": "module",
   "description": "You can use the [editor on GitHub](https://github.com/Adv13/DENIE_Tiffany_7_25012022/edit/algo01/README.md) to maintain and preview the content for your website in Markdown files.",
   "main": ".eslintrc.js",
   "dependencies": {

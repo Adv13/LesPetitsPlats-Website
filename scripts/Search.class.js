@@ -1,8 +1,8 @@
-import Filter from './Filter.class'
-import Tag from './Tag.class'
-import { ReceiptsList } from './Receipt.class'
+import Filter from './Filter.class.js'
+import Tag from './Tag.class.js'
+import { ReceiptsList } from './Receipt.class.js'
 
-import { formatString } from './utils'
+import { formatString } from './utils.js'
 
 export default class Search {
 
@@ -62,20 +62,14 @@ export default class Search {
     // Algo01 Input Research
     // ===============================/
     if (this.$searchInput.value.length >= 3) {
-      for (let i = 0; i < listReceipts.length; i++) {
-        const {name, ingredients, description} = listReceipts[i];
-        const includesInName = name.includes.formatString((inputKeywordsTab));
-        const includesInDescription = description.includes.formatString((inputKeywordsTab));
-        let includesInIngredients = false;
-        for (let y = 0; y < ingredients.length; y++) {
-          if (ingredients[y].ingredient.includes.formatString((inputKeywordsTab))){
-            includesInIngredients = true;
-          }
-        }
-        if (includesInName || includesInDescription || includesInIngredients){
-          result.push(listReceipts[i]);
-        }
-      }
+      result = result.concat(this._searchByTitle(inputKeywordsTab, this._receipts.receiptsList)) // keyword full string
+      result = result.concat(this._searchByDescription(inputKeywordsTab, this._receipts.receiptsList)) // keyword full string
+      result = result.concat(this._searchByAppliance(inputKeywordsTab, this._receipts.receiptsList)) // keyword string one word
+      result = result.concat(this._searchByIngredients(inputKeywordsTab, this._receipts.receiptsList)) // keyword string one word
+      result = result.concat(this._searchByUstensils(inputKeywordsTab, this._receipts.receiptsList)) // keyword string one word
+    } else {
+      result = this._receipts.receiptsList
+    }
     // ===============================/
     // Algo01 Tag Research
     // ===============================/
@@ -287,4 +281,4 @@ export default class Search {
       item.addEventListener('click', this._addTagEvent)
     })
   }
-}
+}}

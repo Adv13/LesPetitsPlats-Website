@@ -1,5 +1,5 @@
-import clockAsset from '../assets/clock.svg'
-import { formatString } from './utils'
+import clockAsset from '../'
+import { formatString } from './utils.js'
 
 export class ReceiptsList {
   constructor (data) {
