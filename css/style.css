@@ -828,6 +828,352 @@ body {
   }
 }
 
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pop-card .3s ease-in-out forwards;
+          animation: pop-card .3s ease-in-out forwards;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.card:hover::after {
+  opacity: 0.25;
+}
+
+.card--reveal1 {
+  -webkit-animation-delay: 70ms;
+          animation-delay: 70ms;
+}
+
+.card--reveal2 {
+  -webkit-animation-delay: 140ms;
+          animation-delay: 140ms;
+}
+
+.card--reveal3 {
+  -webkit-animation-delay: 210ms;
+          animation-delay: 210ms;
+}
+
+.card--reveal4 {
+  -webkit-animation-delay: 280ms;
+          animation-delay: 280ms;
+}
+
+.card--reveal5 {
+  -webkit-animation-delay: 350ms;
+          animation-delay: 350ms;
+}
+
+.card--reveal6 {
+  -webkit-animation-delay: 420ms;
+          animation-delay: 420ms;
+}
+
+.card--reveal7 {
+  -webkit-animation-delay: 490ms;
+          animation-delay: 490ms;
+}
+
+.card--reveal8 {
+  -webkit-animation-delay: 560ms;
+          animation-delay: 560ms;
+}
+
+.card--reveal9 {
+  -webkit-animation-delay: 630ms;
+          animation-delay: 630ms;
+}
+
+.card--reveal10 {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+}
+
+.card--reveal11 {
+  -webkit-animation-delay: 770ms;
+          animation-delay: 770ms;
+}
+
+.card--reveal12 {
+  -webkit-animation-delay: 840ms;
+          animation-delay: 840ms;
+}
+
+.card--reveal13 {
+  -webkit-animation-delay: 910ms;
+          animation-delay: 910ms;
+}
+
+.card--reveal14 {
+  -webkit-animation-delay: 980ms;
+          animation-delay: 980ms;
+}
+
+.card--reveal15 {
+  -webkit-animation-delay: 1050ms;
+          animation-delay: 1050ms;
+}
+
+.card--reveal16 {
+  -webkit-animation-delay: 1120ms;
+          animation-delay: 1120ms;
+}
+
+.card--reveal17 {
+  -webkit-animation-delay: 1190ms;
+          animation-delay: 1190ms;
+}
+
+.card--reveal18 {
+  -webkit-animation-delay: 1260ms;
+          animation-delay: 1260ms;
+}
+
+.card--reveal19 {
+  -webkit-animation-delay: 1330ms;
+          animation-delay: 1330ms;
+}
+
+.card--reveal20 {
+  -webkit-animation-delay: 1400ms;
+          animation-delay: 1400ms;
+}
+
+.card--reveal21 {
+  -webkit-animation-delay: 1470ms;
+          animation-delay: 1470ms;
+}
+
+.card--reveal22 {
+  -webkit-animation-delay: 1540ms;
+          animation-delay: 1540ms;
+}
+
+.card--reveal23 {
+  -webkit-animation-delay: 1610ms;
+          animation-delay: 1610ms;
+}
+
+.card--reveal24 {
+  -webkit-animation-delay: 1680ms;
+          animation-delay: 1680ms;
+}
+
+.card--reveal25 {
+  -webkit-animation-delay: 1750ms;
+          animation-delay: 1750ms;
+}
+
+.card--reveal26 {
+  -webkit-animation-delay: 1820ms;
+          animation-delay: 1820ms;
+}
+
+.card--reveal27 {
+  -webkit-animation-delay: 1890ms;
+          animation-delay: 1890ms;
+}
+
+.card--reveal28 {
+  -webkit-animation-delay: 1960ms;
+          animation-delay: 1960ms;
+}
+
+.card--reveal29 {
+  -webkit-animation-delay: 2030ms;
+          animation-delay: 2030ms;
+}
+
+.card--reveal30 {
+  -webkit-animation-delay: 2100ms;
+          animation-delay: 2100ms;
+}
+
+.card--reveal31 {
+  -webkit-animation-delay: 2170ms;
+          animation-delay: 2170ms;
+}
+
+.card--reveal32 {
+  -webkit-animation-delay: 2240ms;
+          animation-delay: 2240ms;
+}
+
+.card--reveal33 {
+  -webkit-animation-delay: 2310ms;
+          animation-delay: 2310ms;
+}
+
+.card--reveal34 {
+  -webkit-animation-delay: 2380ms;
+          animation-delay: 2380ms;
+}
+
+.card--reveal35 {
+  -webkit-animation-delay: 2450ms;
+          animation-delay: 2450ms;
+}
+
+.card--reveal36 {
+  -webkit-animation-delay: 2520ms;
+          animation-delay: 2520ms;
+}
+
+.card--reveal37 {
+  -webkit-animation-delay: 2590ms;
+          animation-delay: 2590ms;
+}
+
+.card--reveal38 {
+  -webkit-animation-delay: 2660ms;
+          animation-delay: 2660ms;
+}
+
+.card--reveal39 {
+  -webkit-animation-delay: 2730ms;
+          animation-delay: 2730ms;
+}
+
+.card--reveal40 {
+  -webkit-animation-delay: 2800ms;
+          animation-delay: 2800ms;
+}
+
+.card--reveal41 {
+  -webkit-animation-delay: 2870ms;
+          animation-delay: 2870ms;
+}
+
+.card--reveal42 {
+  -webkit-animation-delay: 2940ms;
+          animation-delay: 2940ms;
+}
+
+.card--reveal43 {
+  -webkit-animation-delay: 3010ms;
+          animation-delay: 3010ms;
+}
+
+.card--reveal44 {
+  -webkit-animation-delay: 3080ms;
+          animation-delay: 3080ms;
+}
+
+.card--reveal45 {
+  -webkit-animation-delay: 3150ms;
+          animation-delay: 3150ms;
+}
+
+.card--reveal46 {
+  -webkit-animation-delay: 3220ms;
+          animation-delay: 3220ms;
+}
+
+.card--reveal47 {
+  -webkit-animation-delay: 3290ms;
+          animation-delay: 3290ms;
+}
+
+.card--reveal48 {
+  -webkit-animation-delay: 3360ms;
+          animation-delay: 3360ms;
+}
+
+.card--reveal49 {
+  -webkit-animation-delay: 3430ms;
+          animation-delay: 3430ms;
+}
+
+.card--reveal50 {
+  -webkit-animation-delay: 3500ms;
+          animation-delay: 3500ms;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.card-text {
+  height: 135px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-img-top {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-img-top {
+  height: 178px;
+  background-color: #C7BEBE;
+}
+
+.card-body {
+  padding: 30px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+@-webkit-keyframes pop-card {
+  0% {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+  }
+  50% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pop-card {
+  0% {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+  }
+  50% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .recipe__card:hover {
   opacity: 50%;
 }
@@ -835,7 +1181,10 @@ body {
 .recipe__card__image {
   background-color: #C7BEBE;
   border-radius: 5px 5px 0 0;
-  height: 150px;
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .recipe__card__section {
@@ -851,8 +1200,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 10px;
+  font-size: 8px;
   margin: 0;
+}
+
+.recipe__card__header__title {
+  font-size: 20px;
 }
 
 .recipe__card__header__time {
@@ -860,6 +1213,12 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  font-size: 20px;
+}
+
+.recipe__card__header__icon {
+  width: 2px;
+  height: 2px;
 }
 
 .recipe__card__aside {
