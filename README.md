@@ -17,7 +17,7 @@ Vous êtes freelance et vous venez d’être missionné par l’entreprise “Le
 [Maquette](https://www.figma.com/file/xqeE1ZKlHUWi2Efo8r73NK)  
 
 ## Usage 
-Utiliser [node.js](https://nodejs.org/en/download/) pour travailler sur le projet et comprendre davantage le fonctionnement des algorithmes de tri via différentes méthodes comme les for loop, forEach() et filter().
+Utiliser [node.js](https://nodejs.org/en/download/) pour travailler sur le projet.
 
 ## Livrables
 - Une fiche d’investigation de fonctionnalité sur l’algorithme de recherche (format PDF). Vous y intégrerez le choix de l'algorithme définitif en comparaison à l’autre algorithme de recherche développé.
@@ -25,16 +25,8 @@ Utiliser [node.js](https://nodejs.org/en/download/) pour travailler sur le proje
 
 ## Contribution
 Le projet possède une branche "main" ainsi que deux branches utilisées pour chaque algorithme :
-- [Algo01](https://github.com/Adv13/DENIE_Tiffany_7_16112021/tree/Algo01)
-- [Algo02](https://github.com/Adv13/DENIE_Tiffany_7_16112021/tree/Algo02)
-
-##  Schémas des algorithmes
-
-- [Schémas](https://github.com/Adv13/DENIE_Tiffany_7_16112021/blob/main/LesPetitsPlats_Algos.drawio.pdf)
-
-##  Comparatif via jsbench.ch
-
-- [JSBENCH](https://jsben.ch/nrYFy)
+- Algo01
+- Algo02
 
 ##  Auteur
 
