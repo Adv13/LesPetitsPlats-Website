@@ -2,7 +2,7 @@
 # Les petits plats : P7 OpenClassrooms	
 ![made-with-javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![made-with-sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-
+![made-with-w3c](https://camo.githubusercontent.com/52ca8103595b4b5d9cc53a9edecaaf96126d6964087f961f1959632db286c90d/68747470733a2f2f6a69677361772e77332e6f72672f6373732d76616c696461746f722f696d616765732f76637373)
 ---
 ## Contexte 
 
