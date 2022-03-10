@@ -19,7 +19,7 @@ class RecipeCard {
 		const card = createDom(
 			"article",
 			{ class: "recipe__card" },
-			createDom("img","src", {src:`${('../assets/recettes/' + this._image)}`}, { class: "recipe__card__image", alt:`${this._name}` }),
+			createDom("img", src=`${require('../assets/' + this._image)}`, { class: "recipe__card__image", alt:"${this._name}" }),
 			createDom(
 				"section",
 				{ class: "recipe__card__section" },

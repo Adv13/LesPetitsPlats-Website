@@ -1,3 +1,68 @@
+////////////////////// OLD PROJECT //////////////////////
+////////////////////// INDEX FILE ////////////////////
+
+#logo {
+	font-family: 'DM sans';
+	fill:$primary;
+	flex-direction: column;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  #search {
+	position: relative;
+  
+	input:focus + .search-icon{
+	  fill:$primary;
+	}
+  
+	.search-icon {
+	  content:"";
+	  position: absolute;
+	  top:50%;
+	  right: 15px;
+	  transform: translateY(-50%);
+	}
+  }
+  
+  #filters {
+	height:72px;
+  }
+  
+  p#result {
+	opacity: 0.5;
+  }
+
+
+////////////////////// OLD PROJECT //////////////////////
+////////////////////// BASE FILE ////////////////////
+
+  body {
+	color: black;
+	max-width: 1600px;
+	margin:0 auto;
+  }
+  
+  header {
+	position: relative;
+	z-index: 9;
+  }
+  
+  .form-input:focus {
+	border-color: $primary;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $primary;
+	outline: 0 none;
+  }
+  
+  *:focus-visible {
+	border-color: $primary;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $primary;
+	outline: 0 none;
+  }
+
+////////////////////////// NEW PROJECT ////////////////////////
+
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;800&display=swap");
 
