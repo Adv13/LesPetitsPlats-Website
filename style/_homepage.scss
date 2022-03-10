@@ -1,0 +1,280 @@
+////////////////////// OLD PROJECT //////////////////////
+////////////////////// INDEX FILE ////////////////////
+
+#logo {
+	font-family: 'DM sans';
+	fill:$primary;
+	flex-direction: column;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  #search {
+	position: relative;
+  
+	input:focus + .search-icon{
+	  fill:$primary;
+	}
+  
+	.search-icon {
+	  content:"";
+	  position: absolute;
+	  top:50%;
+	  right: 15px;
+	  transform: translateY(-50%);
+	}
+  }
+  
+  #filters {
+	height:72px;
+  }
+  
+  p#result {
+	opacity: 0.5;
+  }
+
+
+////////////////////// OLD PROJECT //////////////////////
+////////////////////// BASE FILE ////////////////////
+
+  body {
+	color: black;
+	max-width: 1600px;
+	margin:0 auto;
+  }
+  
+  header {
+	position: relative;
+	z-index: 9;
+  }
+  
+  .form-input:focus {
+	border-color: $primary;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $primary;
+	outline: 0 none;
+  }
+  
+  *:focus-visible {
+	border-color: $primary;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $primary;
+	outline: 0 none;
+  }
+
+////////////////////////// NEW PROJECT ////////////////////////
+
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;800&display=swap");
+
+body {
+	background-color: $backgroundColor;
+	font-family: "Lato", sans-serif;
+	margin: 0 1rem;
+}
+
+.body {
+	@include makeAGrid(100%, 1fr, 0.5rem);
+}
+
+*:focus {
+	outline: none;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	margin: 1rem;
+}
+
+.research {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	&__bar {
+		@include form();
+		&__input {
+			@include input(researchBar);
+		}
+		&__submit {
+			@include button(research);
+		}
+	}
+
+	&__fields {
+		display: grid;
+		gap: 0.5rem;
+	}
+
+	&__fields__form {
+		@include form();
+	}
+
+	&__filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+}
+
+.ingredient {
+	&__button {
+		@include button(ingredient);
+	}
+	&__input {
+		@include input(ingredient);
+	}
+	&__results__undisplayed {
+		display: none;
+	}
+	&__results__displayed {
+		background-color: $blue;
+		color: white;
+		padding: 1rem;
+		border-radius: 0 5px 5px 5px;
+		margin: 0;
+	}
+	&__item {
+		cursor: pointer;
+	}
+}
+
+.appliances {
+	&__button {
+		@include button(appliances);
+	}
+	&__input {
+		@include input(appliances);
+	}
+	&__results__undisplayed {
+		display: none;
+	}
+	&__results__displayed {
+		background-color: $green;
+		color: white;
+		padding: 1rem;
+		border-radius: 0 5px 5px 5px;
+		margin: 0;
+	}
+	&__item {
+		cursor: pointer;
+	}
+}
+
+.ustensils {
+	&__button {
+		@include button(ustensils);
+	}
+	&__input {
+		@include input(ustensils);
+	}
+	&__results__undisplayed {
+		display: none;
+	}
+	&__results__displayed {
+		background-color: $red;
+		color: white;
+		padding: 1rem;
+		border-radius: 0 5px 5px 5px;
+		margin: 0;
+	}
+}
+
+.ustensil__item {
+	cursor: pointer
+}
+
+.results {
+	@include makeAGrid(1fr, 1fr, 1rem);
+	margin-bottom: 1rem;
+}
+
+.no__results {
+	background-color: #F5FDB0;
+	border-radius: 5px;
+	font-size: 1.5rem;
+	grid-column: span 3;
+	padding: 3rem 0rem;
+	text-align: center;
+}
+/* Medium devices */
+@media screen and (min-width: $mediumdevices) {
+	.results {
+		@include makeAGrid(repeat(2, 1fr), 1fr, 1rem);
+	}
+}
+
+/* Large devices */
+@media screen and (min-width: $largedevices) {
+	body {
+		margin: auto;
+		max-width: 1200px;
+	}
+
+	.body {
+		@include makeAGrid(1fr, auto, 0.5rem);
+	}
+
+	.header {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.research {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.research__fields {
+		@include makeAGrid(repeat(6, 1fr), 1fr, 0rem 0.5rem);
+		.ingredient {
+			grid-column: 1;
+			grid-row: 1;
+		}
+		.appliances {
+			grid-column: 2;
+			grid-row: 1;
+		}
+		.ustensils {
+			grid-column: 3;
+			grid-row: 1;
+		}
+
+		&__form__results {
+			&__ingredient {
+				grid-column: 1 / span 6;
+				grid-row: 2;
+			}
+			&__appliances {
+				grid-column: 2 / span 6;
+				grid-row: 2;
+			}
+			&__ustensils {
+				grid-column: 3 / span 6;
+				grid-row: 2;
+			}
+		}
+	}
+
+	.ingredient__item {
+		padding: 0rem 0rem 0rem 1rem;
+		text-align: left;
+	}
+
+	.ingredient,
+	.appliances,
+	.ustensils {
+		&__results__undisplayed {
+			display: none;
+		}
+		&__results__displayed {
+			position: absolute;
+			@include makeAGrid(repeat(3, 2fr), 1fr, 0.5rem 5rem);
+		}
+	}
+
+	/* Results section (cards recipes section) */
+	.results {
+		@include makeAGrid(repeat(3, 2fr), 1fr, 1rem);
+	}
+}
+

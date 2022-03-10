@@ -1,9 +1,7 @@
-
 # Les petits plats : P7 OpenClassrooms	
-![made-with-node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![made-with-javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![made-with-sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-
+![made-with-w3c](https://camo.githubusercontent.com/52ca8103595b4b5d9cc53a9edecaaf96126d6964087f961f1959632db286c90d/68747470733a2f2f6a69677361772e77332e6f72672f6373732d76616c696461746f722f696d616765732f76637373)
 ---
 ## Contexte 
 
@@ -17,7 +15,7 @@ Vous êtes freelance et vous venez d’être missionné par l’entreprise “Le
 [Maquette](https://www.figma.com/file/xqeE1ZKlHUWi2Efo8r73NK)  
 
 ## Usage 
-Utiliser [node.js](https://nodejs.org/en/download/) pour travailler sur le projet.
+Comprendre davantage le fonctionnement des algorithmes de tri via différentes méthodes comme les for loop, forEach() et filter().
 
 ## Livrables
 - Une fiche d’investigation de fonctionnalité sur l’algorithme de recherche (format PDF). Vous y intégrerez le choix de l'algorithme définitif en comparaison à l’autre algorithme de recherche développé.
@@ -30,11 +28,11 @@ Le projet possède une branche "main" ainsi que deux branches utilisées pour ch
 
 ##  Schémas des algorithmes
 
-- A venir
+- [Schémas](https://github.com/Adv13/DENIE_Tiffany_7_16112021/blob/main/LesPetitsPlats_Algos.drawio.pdf)
 
 ##  Comparatif via jsbench.ch
 
-- A venir
+- [JSBENCH](https://jsben.ch/v4flF)
 
 ##  Auteur
 
