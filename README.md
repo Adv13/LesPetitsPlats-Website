@@ -22,8 +22,9 @@ Comprendre davantage le fonctionnement des algorithmes de tri via différentes m
 - Un lien vers le repo GitHub du projet comprenant les deux branches avec les deux solutions différentes pour la recherche. 
 
 ## Récupérer le projet 
-- Cloner le projet en local
-- Lancer Live server
+
+- [Cloner le projet](https://github.com/Adv13/DENIE_Tiffany_7_16112021/tree/Algo02)
+- Lancer Live Server
 
 ## Contribution
 Le projet possède une branche "main" ainsi que deux branches utilisées pour chaque algorithme :
