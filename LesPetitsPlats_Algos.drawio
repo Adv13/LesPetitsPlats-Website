@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-10T14:19:14.681Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="HaqIztirWQelvVCHQkDt" version="17.1.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-03-10T14:30:43.605Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="XpghUFPNtcMUsb9MYnf4" version="17.1.0" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -245,6 +245,24 @@
         </mxCell>
         <mxCell id="lZl1uM7QOjwJiWXCCUFG-3" value="Dans les deux cas, nombre de caractères minimum pour déclencher la recherche : 3." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
           <mxGeometry x="40" y="240" width="760" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-6" value="Algorithme 01" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+          <mxGeometry x="40" y="280" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-7" value="&lt;span&gt;Algorithme 02&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+          <mxGeometry x="440" y="280" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-8" value="Avantages :&lt;br&gt;L&#39;utilisation de la boucle sur l&#39;ensemble des recettes pour voir s&#39;il y a une similarité parmi celles-ci avec la valeur entrée en input permet d&#39;avoir un code plus lisible et logique.&amp;nbsp;&lt;br&gt;&lt;br&gt;Inconvénients :&lt;br&gt;Néanmoins, cette méthode est plus longue et demande plus de calculs." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+          <mxGeometry x="40" y="340" width="360" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-9" value="Avantages :&lt;br&gt;L&#39;utilisation de la méthode filter() permet d&#39;utiliser une approche existante pour générer un nouveau tableau de recettes avec les résultats correspondants à l&#39;input entré. S&#39;agissant d&#39;une méthode &quot;officielle&quot;, il suffit alors de l&#39;appeler et la paramétrer.&amp;nbsp;&lt;br&gt;De plus, nous sommes davantage certain que cette méthode est compatible avec la plupart des navigateurs.&lt;br&gt;&lt;br&gt;Inconvénients :&lt;br&gt;Moins compréhensible au premier abord." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+          <mxGeometry x="440" y="340" width="360" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-10" value="JSBENCH.CH" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+          <mxGeometry x="40" y="600" width="760" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-11" value="D&#39;après, le jsbench, l&#39;algorithme le plus efficace est l&#39;algorithme 1&lt;br&gt;Voir résultat ici :&amp;nbsp;https://jsben.ch/pgxQM&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+          <mxGeometry x="40" y="640" width="760" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
