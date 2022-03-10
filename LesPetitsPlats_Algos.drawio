@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-10T14:10:09.668Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="pK6xaXTbMxdrlCk-twJF" version="17.1.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-03-10T14:15:34.549Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="Lg7zaLZ2BZ28HxJuT9XW" version="17.1.0" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -146,7 +146,7 @@
         <mxCell id="0pI6m0Wzu7_y72ZvolHZ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="h3F21PLjOAZYqSKpwi_2-1" source="dJOdC_eOOZ4Zr5w1MP7q-1" target="0pI6m0Wzu7_y72ZvolHZ-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJOdC_eOOZ4Zr5w1MP7q-1" value="La valeur est incluse&lt;br&gt;dans le tableau de valeurs des ingrédients ?" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
+        <mxCell id="dJOdC_eOOZ4Zr5w1MP7q-1" value="La valeur est-elle inclue&lt;br&gt;dans le nom des recettes ?" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
           <mxGeometry x="311" y="268" width="184" height="122" as="geometry" />
         </mxCell>
         <mxCell id="OxSnY7Ns_1XFzSPoKCx8-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="h3F21PLjOAZYqSKpwi_2-1" source="dJOdC_eOOZ4Zr5w1MP7q-2" target="dJOdC_eOOZ4Zr5w1MP7q-3" edge="1">
@@ -155,13 +155,13 @@
         <mxCell id="0pI6m0Wzu7_y72ZvolHZ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="h3F21PLjOAZYqSKpwi_2-1" source="dJOdC_eOOZ4Zr5w1MP7q-2" target="0pI6m0Wzu7_y72ZvolHZ-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJOdC_eOOZ4Zr5w1MP7q-2" value="La valeur est incluse&lt;br&gt;dans le tableau de valeurs des ustensiles ?" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
+        <mxCell id="dJOdC_eOOZ4Zr5w1MP7q-2" value="La valeur est-elle&lt;br&gt;inclue&lt;br&gt;dans la description&lt;br&gt;des recettes ?" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
           <mxGeometry x="311" y="420" width="184" height="122" as="geometry" />
         </mxCell>
         <mxCell id="0pI6m0Wzu7_y72ZvolHZ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.429;entryDx=0;entryDy=0;entryPerimeter=0;" parent="h3F21PLjOAZYqSKpwi_2-1" source="dJOdC_eOOZ4Zr5w1MP7q-3" target="0pI6m0Wzu7_y72ZvolHZ-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJOdC_eOOZ4Zr5w1MP7q-3" value="La valeur est incluse&lt;br&gt;dans le tableau de valeurs des appareils ?" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
+        <mxCell id="dJOdC_eOOZ4Zr5w1MP7q-3" value="La valeur est-elle&lt;br&gt;inclue dans les ingrédients&lt;br&gt;des recettes ?" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
           <mxGeometry x="311" y="570" width="184" height="122" as="geometry" />
         </mxCell>
         <mxCell id="OxSnY7Ns_1XFzSPoKCx8-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="h3F21PLjOAZYqSKpwi_2-1" source="cxQDUQ7IQMn7NcldeOs8-1" target="46WGiKf8XoXZLg1LYzjp-4" edge="1">
@@ -193,19 +193,19 @@
         <mxCell id="0pI6m0Wzu7_y72ZvolHZ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="h3F21PLjOAZYqSKpwi_2-1" source="0pI6m0Wzu7_y72ZvolHZ-2" target="46WGiKf8XoXZLg1LYzjp-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0pI6m0Wzu7_y72ZvolHZ-2" value="Filtre le tableau des recettes avec les recettes qui inclues les valeurs des ingrédients" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
+        <mxCell id="0pI6m0Wzu7_y72ZvolHZ-2" value="Filtre les recettes pour avoir les recettes qui inclues l&#39;input entré dans le nom&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
           <mxGeometry x="530" y="286.5" width="150" height="85" as="geometry" />
         </mxCell>
         <mxCell id="0pI6m0Wzu7_y72ZvolHZ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="h3F21PLjOAZYqSKpwi_2-1" source="0pI6m0Wzu7_y72ZvolHZ-3" target="46WGiKf8XoXZLg1LYzjp-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0pI6m0Wzu7_y72ZvolHZ-3" value="Filtre le tableau des recettes avec les recettes qui inclues les valeurs des ustensiles" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
+        <mxCell id="0pI6m0Wzu7_y72ZvolHZ-3" value="Filtre les recettes pour avoir les recettes qui inclues l&#39;input entré dans le descriptif" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
           <mxGeometry x="530" y="438.5" width="150" height="85" as="geometry" />
         </mxCell>
         <mxCell id="0pI6m0Wzu7_y72ZvolHZ-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="h3F21PLjOAZYqSKpwi_2-1" source="0pI6m0Wzu7_y72ZvolHZ-4" target="46WGiKf8XoXZLg1LYzjp-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0pI6m0Wzu7_y72ZvolHZ-4" value="Filtre le tableau des recettes avec les recettes qui inclues les valeurs des appareils" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
+        <mxCell id="0pI6m0Wzu7_y72ZvolHZ-4" value="Filtre les recettes pour avoir les recettes qui inclues l&#39;input entré dans le(s) ingrédient(s)s" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
           <mxGeometry x="530" y="587.5" width="150" height="85" as="geometry" />
         </mxCell>
         <mxCell id="0pI6m0Wzu7_y72ZvolHZ-5" value="Non" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="h3F21PLjOAZYqSKpwi_2-1" vertex="1">
