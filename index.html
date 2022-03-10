@@ -29,6 +29,7 @@
 			<form class="research__bar ">
 				<input
 					class="research__bar__input form-input bg-light px-10 py-3"
+					aria-label="Rechercher un ingrédient, un appareil, un ustensile ou une recette"
 					placeholder="Rechercher un ingrédient, un appareil, un ustensile ou une recette"
 					type="search"
 				/>
@@ -36,10 +37,10 @@
 					<i class="far fa-search"></i>
 				</button>
 			</form>
-			<aside class="research__filters"></aside>
+			<aside id="tags" class="research__filters" data-wrapper="tags" ></aside>
 		</div>
 		<!-- Show the 3 filters : ingredients, appliances, ustensils -->
-		<div class="research__fields">
+		<div class="research__fields py-2 container-fluid">
 			<!-- Ingredient's part -->
 			<form class="research__fields__form ingredient__form">
 				<input
@@ -66,7 +67,7 @@
 				</button>
 			</form>
 			<aside class="research__fields__form__results__appliances">
-				<ul class="appliancess__results appliances__results__undisplayed"></ul>
+				<ul class="appliances__results appliances__results__undisplayed"></ul>
 			</aside>
 			<!-- Ustensil's part -->
 			<form class="research__fields__form ustensils__form">
@@ -84,7 +85,7 @@
 			</aside>
 		</div>
 		<!-- Recipes shown depending of the research -->
-		<main class="results"></main>
+		<main class="results container-fluid px-4""></main>
 		<!-- My JS files -->
 		<script src="./scripts/main.js"></script>
 		<script src="./scripts/constructors/RecipeCard.js"></script>
