@@ -21,6 +21,11 @@ Comprendre davantage le fonctionnement des algorithmes de tri via différentes m
 - Une fiche d’investigation de fonctionnalité sur l’algorithme de recherche (format PDF). Vous y intégrerez le choix de l'algorithme définitif en comparaison à l’autre algorithme de recherche développé.
 - Un lien vers le repo GitHub du projet comprenant les deux branches avec les deux solutions différentes pour la recherche. 
 
+## Récupérer le projet 
+
+- [Cloner le projet](https://github.com/Adv13/DENIE_Tiffany_7_16112021/tree/Algo02)
+- Lancer Live Server
+
 ## Contribution
 Le projet possède une branche "main" ainsi que deux branches utilisées pour chaque algorithme :
 - [Algo01](https://github.com/Adv13/DENIE_Tiffany_7_16112021/tree/Algo01)
