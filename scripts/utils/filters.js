@@ -1,7 +1,4 @@
-/**
- *
- * @param {Array | Objects} recipes
- */
+
 const listenOnInputs = (recipes) => {
 	const { ingredients, ustensils, appliances } = generateFilters(recipes);
 

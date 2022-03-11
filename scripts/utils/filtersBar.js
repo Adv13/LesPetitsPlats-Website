@@ -1,8 +1,3 @@
-/**
- *
- * @param {*} selectedFiltersUnduplicated
- * @param {*} recipes
- */
 const createFiltersBar = (selectedFiltersUnduplicated, recipes) => {
 	filtersBar.innerHTML = "";
 	selectedFiltersUnduplicated.forEach((filter) => {
