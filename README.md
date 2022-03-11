@@ -32,7 +32,7 @@ Le projet possède une branche "main" ainsi que deux branches utilisées pour ch
 
 ##  Comparatif via jsbench.ch
 
-- [JSBENCH](https://jsben.ch/v4flF)
+- [JSBENCH](https://jsben.ch/f6GAN)
 
 ##  Auteur
 
