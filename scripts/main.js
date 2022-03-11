@@ -21,7 +21,7 @@ const generateFilters = (recipes) => {
 	* @returns {Array | Objects}
 	*/
 const getData = async () =>
-	await fetch("../scripts/data/recipes.json", {
+	await fetch("./scripts/data/recipes.json", {
 		mode: "no-cors",
 		method: "GET",
 		headers: {
