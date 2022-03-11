@@ -15,7 +15,7 @@ Vous êtes freelance et vous venez d’être missionné par l’entreprise “Le
 [Maquette](https://www.figma.com/file/xqeE1ZKlHUWi2Efo8r73NK)  
 
 ## Usage 
-Comprendre davantage le fonctionnement des algorithmes de tri via différentes méthodes comme les for loop, forEach() et filter().
+Comprendre davantage le fonctionnement des algorithmes de tri via différentes méthodes comme les for loop et filter().
 
 ## Livrables
 - Une fiche d’investigation de fonctionnalité sur l’algorithme de recherche (format PDF). Vous y intégrerez le choix de l'algorithme définitif en comparaison à l’autre algorithme de recherche développé.
@@ -23,7 +23,7 @@ Comprendre davantage le fonctionnement des algorithmes de tri via différentes m
 
 ## Récupérer le projet 
 
-- [Cloner le projet](https://github.com/Adv13/DENIE_Tiffany_7_16112021/tree/Algo02)
+- [Cloner le projet](https://github.com/Adv13/DENIE_Tiffany_7_16112021/tree/Algo01) avec l'algorithme sélectionné
 - Lancer Live Server
 
 ## Contribution
@@ -37,7 +37,7 @@ Le projet possède une branche "main" ainsi que deux branches utilisées pour ch
 
 ##  Comparatif via jsbench.ch
 
-- [JSBENCH](https://jsben.ch/XJ9nb)
+- [JSBENCH](https://jsben.ch/f6GAN)
 
 ##  Auteur
 
