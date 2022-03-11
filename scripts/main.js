@@ -18,7 +18,7 @@ const generateFilters = (recipes) => {
 Fetch data on local file
 */
 const getData = async () =>
-	await fetch("../scripts/data/recipes.json", {
+	await fetch("./scripts/data/recipes.json", {
 		mode: "no-cors",
 		method: "GET",
 		headers: {
