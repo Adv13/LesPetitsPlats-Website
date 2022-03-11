@@ -39,6 +39,10 @@ Le projet possède une branche "main" ainsi que deux branches utilisées pour ch
 
 - [JSBENCH](https://jsben.ch/f6GAN)
 
+## W3C
+
+- [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadv13.github.io%2FDENIE_Tiffany_7_16112021%2F)
+
 ##  Auteur
 
 Tiffany
