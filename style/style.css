@@ -835,10 +835,8 @@ body {
 .recipe__card__image {
   background-color: #C7BEBE;
   border-radius: 5px 5px 0 0;
-  height: 200px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .recipe__card__section {
@@ -867,12 +865,7 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  font-size: 20px;
-}
-
-.recipe__card__header__icon {
-  width: 2px;
-  height: 2px;
+  font-size: 12px;
 }
 
 .recipe__card__aside {
@@ -897,9 +890,11 @@ body {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-  font-size: 12px;
+  font-size: 10px;
   -ms-grid-column-align: start;
       justify-self: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .recipe__card__description {
@@ -910,6 +905,7 @@ body {
   -ms-grid-column-align: start;
       justify-self: start;
   margin: 0;
+  font-size: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
@@ -920,7 +916,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #47597E;
+  background-color: #454546;
   border-radius: 5px;
   color: white;
   cursor: pointer;
