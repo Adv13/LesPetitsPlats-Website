@@ -34,6 +34,10 @@ Le projet possède une branche "main" ainsi que deux branches utilisées pour ch
 
 - [JSBENCH](https://jsben.ch/f6GAN)
 
+## Choix
+
+L'algorithme 01 a été choisi.
+
 ##  Auteur
 
 Tiffany
