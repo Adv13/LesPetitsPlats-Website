@@ -1,3 +1,9 @@
+//////////////////////////////////////////////////////////////////////////////////////
+////////////// Ici, c'est le constructeur pour les cartes de recette qui récupère les données
+////////////// pour les stocker dans les éléments correspondants.
+////////////// La méthode get recipeCard permet ensuite de créer le dom dans le html basé sur les données stockées grâce au constructeur
+////////////// dans une constante "card".
+
 class RecipeCard {
 	constructor(data) {
 		this._id = data.id;
