@@ -1,3 +1,17 @@
+/////////////////////////////////////////////////////////////////////////////////////
+///////////// Ce script permet de récupérer les données du fichier recipes.json via la constante non modifiable "getData"
+////////////////////////
+///////////// Ensuite, dans la constante "generateFilters", utiliser un forEach sur chaque recette
+///////////// permettant, dans 3 tableaux (ingrédients, appliances, ustensils), de dispatcher les données par ordre ascendant (= alphabétique)
+////////////////////////
+///////////// Ensuite, dans la constante "createRecipesCard", pour chaque recette,
+///////////// l'ajouter dans la constante "recipesSection" en récupérant ses données grâce au constructor "recipeCard" appliqué à la recette
+///////////// pour permettre ensuite de créer le dom dans le html
+////////////////////////
+///////////// L'init asynchrone permet d'attendre d'avoir les donénes avant d'appliquer les fonctions nécessaires à la construction de la page
+////////////////////////
+///////////// listenOnInput permet d'ajouter la fonction qui s'active et déclanche une autre fonction selon l'event qui a eu lieu
+
 /*
  Create globals objects for all categories
 */
