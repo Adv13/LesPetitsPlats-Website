@@ -1,3 +1,13 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+////////////////// Affichages des ustensiles, appareils, ingredients au click de la souris sur chaque filtre concerné
+////////////////// Et, si il y a eu un click dans un filtrer et si, dans la barre de recherche de chaque filtre, on entre plus de 3 caractères, alors déclencher le filter()
+////////////////// pour comparer si la query matche une donnée dans le tableau concerné (ingredients, appareil, ou ustensiles)
+////////////////// Et, grâce aux fonctions listenOnUstensilsInput()/listenOnIngredientsItems();/listenOnAppliancesItems();
+////////////////// dans une constante concernée, on stocke toute la liste d'ingrédients/appareils/ustensiles pour ensuite
+////////////////// pour chacun d'eux, si il y a un event de type click dessus, prendre l'item,
+////////////////// créer un tag via createFiltersBar() de filtersBar.js de l'item sélectionné au dessus des autres filtres
+
+
 
 const listenOnInputs = (recipes) => {
 	const { ingredients, ustensils, appliances } = generateFilters(recipes);
