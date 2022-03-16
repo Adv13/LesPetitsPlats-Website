@@ -1,3 +1,23 @@
+///////////////////////////////////////////////////////////////////////////////////////////
+////////////////// Constante "createFiltersBar" qui permet d'ajouter la partie html concernant les filtres sélectionnés
+///////////////////////////////////////
+////////////////// Constante "researchOnFilters" qui permet d'utiliser filter() pour comparer la query et les données 
+////////////////// pour retourner celles qui matchent.
+////////////////// si la constante result non modifiable est pas vide alors appeler recipesSection, createRecipesCard, listenOnFilterBar pour afficher le résultat
+////////////////// si la constante result est vide alors afficher "Aucune recette ne correspond à votre critère… vous pouvez
+////////////////// chercher « tarte aux pommes », « poisson », etc.
+///////////////////////////////////////
+////////////////// listenOnFilterBar permet, pour chaque filtre/tag, d'appeler la fonction removeFilter qui permet de le retirer lorsqu'il y a un click dessus
+///////////////////////////////////////
+////////////////// removeFilter permet de supprimé le filtre sélectionné et, si l'array est pas vide de 
+////////////////// lancer recipesSection et createRecipesCard
+////////////////// sinon lancer researchOnFilters
+
+
+////////////////// REMINDER : slice() extracts the text from one string and returns a new string.
+////////////////// REMINDER : The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+
 const createFiltersBar = (selectedFiltersUnduplicated, recipes) => {
 	filtersBar.innerHTML = "";
 	selectedFiltersUnduplicated.forEach((filter) => {
