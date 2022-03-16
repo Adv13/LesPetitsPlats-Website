@@ -1,3 +1,14 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////// la constante filteredRecipes de gérer l'affichage des recettes selon la recherche faite dans la barre principale
+////////////////// si il y a un event de touche levée et qu'il y a plus de 3 caractères dans la barre de recherche alors 
+////////////////// stocker la query dans une constante, créer un tableau results et pour chaque recettes présentes dans le fichier de données
+////////////////// vérifier dans le nom, les ingredients, et la description si la query matche dans l'une d'elle
+////////////////// si oui, appeler recipesSection et createRecipesCard appliquées a la constante results
+////////////////// si non, afficher Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.
+////////////////// si il y a moins de 3 caractères dans la barre de recherche, continuer d'afficher toutes les recettes en appelant
+////////////////// recipesSection et createRecipesCard sur recipes
+
+
 const filteredRecipes = (recipes, searchBar) => {
 	searchBar.addEventListener("keyup", (e) => {
 		if (e.target.value.length >= 3) {
