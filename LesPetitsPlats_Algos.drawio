@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-03-10T14:30:43.605Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="XpghUFPNtcMUsb9MYnf4" version="17.1.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-03-16T16:40:07.233Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="N_2zSK_L2-rM1JEyGcSC" version="17.1.2" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="844" dy="744" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -96,7 +96,7 @@
         <mxCell id="ww0zxPQRnK6dXdHO870B-32" value="Utilisation d&#39;une boucle for sur l&#39;ensemble des recettes.&amp;nbsp;&lt;br&gt;Création d&#39;un tableau vide et utilisation de la méthode push si la valeur entrée dans l&#39;input est présente dans le nom de la recette, la description de la recette ou bien dans les ingrédients de la recette." style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="40" y="960" width="720" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="Ir9r9Hjz1ndDT2SLpbqS-0" value="Fiche d&#39;investigation concernant la fonctionnalité de recherche principale" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="Ir9r9Hjz1ndDT2SLpbqS-0" value="Fiche d&#39;investigation concernant la fonctionnalité de recherche principale" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="660" y="10" width="140" height="140" as="geometry" />
         </mxCell>
       </root>
@@ -233,35 +233,35 @@
     </mxGraphModel>
   </diagram>
   <diagram id="dSgU1S0pVq0JYvfXi5R0" name="Page-3">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="844" dy="744" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="OMHysvQcuE56Auxf8EZp-0" />
         <mxCell id="OMHysvQcuE56Auxf8EZp-1" parent="OMHysvQcuE56Auxf8EZp-0" />
-        <mxCell id="lZl1uM7QOjwJiWXCCUFG-0" value="Fiche d&#39;investigation concernant la fonctionnalité de recherche principale" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-0" value="Fiche d&#39;investigation concernant la fonctionnalité de recherche principale" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="OMHysvQcuE56Auxf8EZp-1" vertex="1">
           <mxGeometry x="660" y="10" width="140" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="lZl1uM7QOjwJiWXCCUFG-2" value="Fonctionnalité étudiée&amp;nbsp; :&amp;nbsp; barre de recherche principale.&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Fiche%20d&#39;investigation%20concernant%20la%20fonctionnalit%C3%A9%20de%20recherche%20principale%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3Baspect%3Dfixed%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22660%22%20y%3D%2210%22%20width%3D%22140%22%20height%3D%22140%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-2" value="Fonctionnalité étudiée&amp;nbsp; :&amp;nbsp; barre de recherche principale.&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Fiche%20d&#39;investigation%20concernant%20la%20fonctionnalit%C3%A9%20de%20recherche%20principale%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3Baspect%3Dfixed%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22660%22%20y%3D%2210%22%20width%3D%22140%22%20height%3D%22140%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="OMHysvQcuE56Auxf8EZp-1" vertex="1">
           <mxGeometry x="40" y="200" width="760" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="lZl1uM7QOjwJiWXCCUFG-3" value="Dans les deux cas, nombre de caractères minimum pour déclencher la recherche : 3." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-3" value="Dans les deux cas, nombre de caractères minimum pour déclencher la recherche : 3." style="rounded=0;whiteSpace=wrap;html=1;" parent="OMHysvQcuE56Auxf8EZp-1" vertex="1">
           <mxGeometry x="40" y="240" width="760" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="lZl1uM7QOjwJiWXCCUFG-6" value="Algorithme 01" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-6" value="Algorithme 01" style="rounded=0;whiteSpace=wrap;html=1;" parent="OMHysvQcuE56Auxf8EZp-1" vertex="1">
           <mxGeometry x="40" y="280" width="360" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="lZl1uM7QOjwJiWXCCUFG-7" value="&lt;span&gt;Algorithme 02&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-7" value="&lt;span&gt;Algorithme 02&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="OMHysvQcuE56Auxf8EZp-1" vertex="1">
           <mxGeometry x="440" y="280" width="360" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="lZl1uM7QOjwJiWXCCUFG-8" value="Avantages :&lt;br&gt;L&#39;utilisation de la boucle sur l&#39;ensemble des recettes pour voir s&#39;il y a une similarité parmi celles-ci avec la valeur entrée en input permet d&#39;avoir un code plus lisible et logique.&amp;nbsp;&lt;br&gt;&lt;br&gt;Inconvénients :&lt;br&gt;Néanmoins, cette méthode est plus longue et demande plus de calculs." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-8" value="Avantages :&lt;br&gt;L&#39;utilisation de la boucle sur l&#39;ensemble des recettes pour voir s&#39;il y a une similarité parmi celles-ci avec la valeur entrée en input permet d&#39;avoir un code plus lisible et logique.&amp;nbsp;&lt;br&gt;&lt;br&gt;Inconvénients :&lt;br&gt;Néanmoins, cette méthode est plus longue et peut demander plus de calculs." style="rounded=0;whiteSpace=wrap;html=1;" parent="OMHysvQcuE56Auxf8EZp-1" vertex="1">
           <mxGeometry x="40" y="340" width="360" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="lZl1uM7QOjwJiWXCCUFG-9" value="Avantages :&lt;br&gt;L&#39;utilisation de la méthode filter() permet d&#39;utiliser une approche existante pour générer un nouveau tableau de recettes avec les résultats correspondants à l&#39;input entré. S&#39;agissant d&#39;une méthode &quot;officielle&quot;, il suffit alors de l&#39;appeler et la paramétrer.&amp;nbsp;&lt;br&gt;De plus, nous sommes davantage certain que cette méthode est compatible avec la plupart des navigateurs.&lt;br&gt;&lt;br&gt;Inconvénients :&lt;br&gt;Moins compréhensible au premier abord." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-9" value="Avantages :&lt;br&gt;L&#39;utilisation de la méthode filter() permet d&#39;utiliser une approche existante pour générer un nouveau tableau de recettes avec les résultats correspondants à l&#39;input entré. S&#39;agissant d&#39;une méthode &quot;officielle&quot;, il suffit alors de l&#39;appeler et la paramétrer.&amp;nbsp;&lt;br&gt;De plus, nous sommes davantage certain que cette méthode est compatible avec la plupart des navigateurs.&lt;br&gt;&lt;br&gt;Inconvénients :&lt;br&gt;Moins compréhensible au premier abord." style="rounded=0;whiteSpace=wrap;html=1;" parent="OMHysvQcuE56Auxf8EZp-1" vertex="1">
           <mxGeometry x="440" y="340" width="360" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="lZl1uM7QOjwJiWXCCUFG-10" value="JSBENCH.CH" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-10" value="JSBENCH.CH" style="rounded=0;whiteSpace=wrap;html=1;" parent="OMHysvQcuE56Auxf8EZp-1" vertex="1">
           <mxGeometry x="40" y="600" width="760" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="lZl1uM7QOjwJiWXCCUFG-11" value="D&#39;après, le jsbench, l&#39;algorithme le plus efficace est l&#39;algorithme 1&lt;br&gt;Voir résultat ici :&amp;nbsp;https://jsben.ch/pgxQM&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="OMHysvQcuE56Auxf8EZp-1">
+        <mxCell id="lZl1uM7QOjwJiWXCCUFG-11" value="D&#39;après, le jsbench, l&#39;algorithme le plus efficace est l&#39;algorithme 1&lt;br&gt;Voir résultat ici :&amp;nbsp;https://jsben.ch/pgxQM&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="OMHysvQcuE56Auxf8EZp-1" vertex="1">
           <mxGeometry x="40" y="640" width="760" height="80" as="geometry" />
         </mxCell>
       </root>
