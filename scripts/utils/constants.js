@@ -1,3 +1,7 @@
+///////////////////////////////////////////////////////////////////////
+///////////// Toutes les constantes basées sur la sélection des éléments du dom sont regroupées ici.
+
+
 /**
  * DOM elements
  */
