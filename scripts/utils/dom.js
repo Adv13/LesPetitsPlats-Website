@@ -1,3 +1,14 @@
+///////////////////////////////////////////////////////////
+////////////// La constante createDom (appelée dans recipeCard) ici permet de créer des éléments
+////////////// et de créer/classer ses enfants selon certaines conditions comme :
+////////////// si le type du child est string alors le stocker dans une constante textNode pour ensuite l'ajouter à l'élément
+////////////// si le child est un HTMLElement alors l'ajouter à l'élément
+////////////// si le child est un object alors, pour chaque object, appliquer un entries()
+////////////// qui permet d'avoir les key/values et de les mettre en attribut à l'élément
+
+
+/////////////// REMINDER : The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array
+
 
 /**
  * Fonction pour créer des éléments
