@@ -828,10 +828,6 @@ body {
   }
 }
 
-.recipe__card:hover {
-  opacity: 50%;
-}
-
 .recipe__card__image {
   background-color: #C7BEBE;
   border-radius: 5px 5px 0 0;

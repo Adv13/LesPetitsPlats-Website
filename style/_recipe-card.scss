@@ -1,9 +1,6 @@
 
 .recipe__card {
 
-	&:hover{
-		opacity:50%;
-	}
 	&__image {
 		background-color: $secondaryGrey;
 		border-radius: 5px 5px 0 0;
